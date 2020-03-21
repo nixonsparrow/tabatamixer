@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div align="center">
+    <h1>Losowa Tabata</h1>
+    <h2>{{ tabata_song.name }}</h2>
+    <iframe width="560" height="315" src="{{ tabata_song.youtube + tabata_song.video }}"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <BR>
+        {% for exercise in exercises %}
+            <P>ćwiczenie - <b>{{ exercise.name }}</b></P>
+        {% endfor %}
+</div>
+{% endblock content %}
